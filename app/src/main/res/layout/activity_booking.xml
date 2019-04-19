@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_gravity="start"
+    android:id="@+id/activity_booking_coordinateLayout"
+    android:fitsSystemWindows="true"
+    tools:context=".controller.booking.BookingActivity">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            app:cardElevation="5dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="12dp"
+                    android:text="Prénom"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/activity_booking_first_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:ems="10"
+                    android:hint="   Guy"
+                    android:inputType="textPersonName"
+                    android:singleLine="false"
+                    android:textAllCaps="false" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Nom de famille"
+
+                    android:padding="12dp"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:id="@+id/activity_booking_last_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:hint="   Trezz"
+                    android:padding="12dp"
+                    android:inputType="textPersonName"
+                    android:singleLine="false"
+                    android:textAllCaps="false" />
+
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Nombre de personnes"
+                    android:padding="12dp"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:id="@+id/activity_booking_people_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:padding="12dp"
+                    android:hint="   2"
+                    android:inputType="number" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:padding="12dp"
+                    android:text="Numero telephone"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/activity_booking_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:padding="12dp"
+                    android:hint="   0810000000"
+                    android:inputType="phone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Votre addresse email"
+                    android:padding="12dp"
+                    android:textSize="20dp"/>
+
+                <EditText
+                    android:id="@+id/activity_booking_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:padding="12dp"
+                    android:hint="   application@email.com"
+                    android:inputType="textEmailAddress" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_date"/>
+
+                    <EditText
+                        android:id="@+id/activity_booking_date"
+                        android:layout_width="155dp"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:padding="12dp"
+                        android:hint="   05.01.2019"
+                        android:inputType="date" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_heur"
+                        android:layout_marginLeft="2dp"/>
+                    <EditText
+                        android:id="@+id/activity_booking_hour"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:padding="12dp"
+                        android:hint="   20:30"
+                        android:inputType="time" />
+
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/booking_activity_progress_bar"
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_margin="@dimen/default_large_margin"
+                    android:visibility="invisible" />
+
+                <Button
+                    android:id="@+id/activity_booking_button_sender"
+                    android:layout_width="379dp"
+                    android:layout_height="wrap_content"
+                    android:text="Reserver maintenant"
+                    android:textColor="#fff"
+                    android:background="@drawable/bttnstyle_commande"
+                    android:layout_gravity="center" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </ScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

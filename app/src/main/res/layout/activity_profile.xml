@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f4f4f4"
+    android:layout_gravity="start"
+    tools:context=".controller.auth.ProfileActivity"
+    android:fitsSystemWindows="true">
+
+    <!--Profil   android:background="#ac0c0c   008577  FF7E0E0E  "-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/custom_profil"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginBottom="7dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/profile_activity_imageview_profile"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginLeft="58dp"
+                android:gravity="center"
+                app:srcCompat="@drawable/cercle_profil" />
+
+            <ProgressBar
+                android:id="@+id/profile_activity_progress_bar"
+                android:layout_width="20dip"
+                android:layout_height="20dip"
+                android:layout_margin="@dimen/default_large_margin"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <!-- PROFILE EMAIL CONTAINER -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="@dimen/default_large_margin">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent2"
+                android:text="@string/text_view_email"
+                android:textSize="@dimen/default_text_size"
+                android:textStyle="bold"/>
+
+            <!-- PROFILE EMAIL -->
+            <TextView
+                android:id="@+id/profile_activity_text_view_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorAccent2"
+                android:textSize="@dimen/default_text_size"
+                android:paddingLeft="@dimen/default_margin"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/default_large_margin"
+        android:orientation="horizontal">
+
+        <!-- PROFILE USERNAME -->
+        <android.support.design.widget.TextInputEditText
+            android:id="@+id/profile_activity_edit_text_username"
+            android:layout_width="278dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="1dip"
+            android:text="@string/text_input_username"
+            android:textSize="@dimen/default_text_size"
+            android:padding="5dip"
+            android:background="#fff"/>
+
+        <Button
+            android:id="@+id/profile_activity_button_update"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="37dp"
+            android:layout_marginTop="1dp"
+            android:layout_marginRight="8dp"
+            android:textSize="@dimen/default_text_size"
+            android:text="@string/button_update_account"
+            android:textColor="#fff"
+            android:background="@drawable/button_radius_accent_color"
+            android:padding="@dimen/default_margin" />
+    </LinearLayout>
+
+    <!-- BUTTONS CONTAINER -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+        <!-- BUTTON SIGN OUT -->
+        <Button
+            android:id="@+id/profile_activity_button_sign_out"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_sign_out_account"
+            android:textColor="#fff"
+            android:textSize="@dimen/default_text_size"
+            android:background="@drawable/button_radius_accent_color"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="@dimen/default_margin"
+            android:padding="@dimen/default_margin"/>
+
+        <!-- BUTTON DELETE ACCOUNT -->
+        <Button
+            android:id="@+id/profile_activity_button_delete"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/button_delete_account"
+            android:textColor="#fff"
+            android:textSize="@dimen/default_text_size"
+            android:background="@drawable/button_radius_primary_color"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_margin="@dimen/default_margin"
+            android:padding="@dimen/default_margin"/>
+
+    </LinearLayout>
+
+</LinearLayout>
